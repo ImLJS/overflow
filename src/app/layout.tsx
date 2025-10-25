@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navigation/navbar";
 import ThemeProvider from "@/context/theme";
 
 const inter = Inter({
@@ -34,6 +35,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           disableTransitionOnChange
           enableSystem
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
