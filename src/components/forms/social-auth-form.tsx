@@ -14,7 +14,7 @@ const SocialAuthForm = () => {
     try {
       await signIn(provider, {
         redirectTo: ROUTES.HOME,
-        redirect: false,
+        redirect: true,
       });
     } catch (error) {
       console.log(error);
@@ -24,6 +24,9 @@ const SocialAuthForm = () => {
           error instanceof Error
             ? error.message
             : "An error occured during sign-in",
+        richColors: true,
+        closeButton: true,
+        duration: 3000,
       });
     }
   };
